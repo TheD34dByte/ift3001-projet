@@ -14,7 +14,7 @@ jobs:
             - name: Install dependencies
               run: |
                   sudo apt-get update
-                  sudo apt-get install -y clang clang-format clang-tidy libgl1-mesa-dev
+                  sudo apt-get install -y clang clang-format clang-tidy libgl1-mesa-dev libglfw3-dev
                   npm ci
 
             - name: Configure CMake
