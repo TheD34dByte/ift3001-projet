@@ -12,8 +12,10 @@
 - Etc. (TBD)
 
 ## Requirements
-- C++ version >= 17
-- CMake version >= 3.31.6
+- C++ >= 17
+- OpenGL >= 3.3
+- GLFW >= 3.4-3
+- CMake >= 3.31.6
 - clangd >= 22.1.6
 - NPM >= 9.2.0
 
