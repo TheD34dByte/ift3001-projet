@@ -5,7 +5,7 @@ on:
         branches: [main]
 
 jobs:
-    lint-cpp:
+    cpp:
         runs-on: ubuntu-latest
 
         steps:
@@ -22,7 +22,7 @@ jobs:
             - name: Lint C++
               run: cmake --build build --target lint
 
-    lint-json:
+    json:
         runs-on: ubuntu-latest
 
         steps:
