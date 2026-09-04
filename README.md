@@ -14,7 +14,7 @@
 ## Requirements
 - C++ version >= 17
 - CMake version >= 3.31.6
-- clangd >= TBD
+- clangd >= 22.1.6
 - NPM >= 9.2.0
 
 ## Building
