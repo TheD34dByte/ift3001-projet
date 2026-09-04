@@ -1,0 +1,27 @@
+name: Lint
+
+on:
+    pull_request:
+        branches: [main]
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v6
+
+            - name: Install clang
+              run: sudo apt-get update && sudo apt-get install -y clang clang-format clang-tidy
+
+            - name: Configure CMake
+              run: cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+            - name: Install npm dependencies
+              run: npm ci
+
+            - name: Lint C++
+              run: cmake --build build --target lint
+
+            - name: Lint JSON
+              run: npm run lint:json
